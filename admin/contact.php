@@ -5,7 +5,8 @@ if (!isset($_SESSION['admin_id'])) {
     exit;
 }
 require_once '../app/config/params.php';
-$pdo = $connexion;
+use Core\Database;
+$pdo = Database::getConnection();
 
 // Fetch all contact info
 $stmt = $pdo->query("SELECT * FROM contact_info ORDER BY id ASC");
