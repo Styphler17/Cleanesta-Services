@@ -12,7 +12,8 @@ define('BASE_PATH', dirname(__DIR__));
 require_once __DIR__ . '/core/init.php';
 
 // If accessing the root directory, set the page to home
-if ($_SERVER['REQUEST_URI'] === '/scrub/' || $_SERVER['REQUEST_URI'] === '/scrub/') {
+$requestPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+if ($requestPath === BASE_URL || $requestPath === BASE_URL . '/' ) {
     $_GET['page'] = 'home';
 }
 

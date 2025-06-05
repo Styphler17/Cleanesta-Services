@@ -100,7 +100,7 @@ ob_start();
                 <td class="px-4 py-3"><?php echo $admin['id']; ?></td>
                 <td class="px-4 py-3">
                     <?php if ($admin['picture']): ?>
-                        <img src="<?php echo str_replace('../', '/scrub/', $admin['picture']); ?>" alt="Profile" class="w-10 h-10 rounded-full object-cover">
+                        <img src="<?php echo str_replace('../', BASE_URL . '/', $admin['picture']); ?>" alt="Profile" class="w-10 h-10 rounded-full object-cover">
                     <?php else: ?>
                         <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
                             <span class="text-gray-500 text-sm"><?php echo strtoupper(substr($admin['username'], 0, 1)); ?></span>
@@ -128,7 +128,7 @@ ob_start();
     <div class="bg-white rounded-lg shadow p-4 flex flex-col gap-2">
         <div class="flex items-center gap-3">
             <?php if ($admin['picture']): ?>
-                <img src="<?php echo str_replace('../', '/scrub/', $admin['picture']); ?>" alt="Profile" class="w-12 h-12 rounded-full object-cover">
+                <img src="<?php echo str_replace('../', BASE_URL . '/', $admin['picture']); ?>" alt="Profile" class="w-12 h-12 rounded-full object-cover">
             <?php else: ?>
                 <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center">
                     <span class="text-gray-500 text-lg"><?php echo strtoupper(substr($admin['username'], 0, 1)); ?></span>
@@ -256,7 +256,7 @@ function openEditModal(id) {
     const preview = document.getElementById('preview-edit');
     const img = preview.querySelector('img');
     if (admin.picture) {
-        img.src = admin.picture.replace('../', '/scrub/');
+        img.src = admin.picture.replace('../', '<?php echo BASE_URL; ?>/');
         preview.classList.remove('hidden');
     } else {
         img.src = '';

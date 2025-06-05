@@ -9,13 +9,13 @@ $username = $_SESSION['admin_username'] ?? null;
 <header class="w-full bg-white shadow flex items-center justify-between px-8 py-4 sticky top-0 z-10">
     <div class="flex items-center gap-3">
         <!-- Logo (optional, remove if not needed) -->
-        <img src="/scrub/assets/images/logo/cleanesta-logo.png" alt="Logo" class="h-12 w-auto">
+        <img src="<?php echo BASE_URL; ?>/assets/images/logo/cleanesta-logo.png" alt="Logo" class="h-12 w-auto">
     </div>
     <div class="flex items-center gap-4 justify-between">
         <div class="relative" x-data="{ open: false }">
             <button @click="open = !open" class="flex items-center space-x-2 text-gray-700 hover:text-primary focus:outline-none">
                 <?php if (isset($_SESSION['admin_picture']) && $_SESSION['admin_picture']): ?>
-                    <img src="<?php echo str_replace('../', '/scrub/', $_SESSION['admin_picture']); ?>" alt="Profile" class="w-8 h-8 rounded-full object-cover">
+                    <img src="<?php echo str_replace('../', BASE_URL . '/', $_SESSION['admin_picture']); ?>" alt="Profile" class="w-8 h-8 rounded-full object-cover">
                 <?php else: ?>
                     <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
                         <span class="text-gray-500 text-sm">

@@ -16,7 +16,7 @@ class Service extends Model {
         // Fix image_url paths
         foreach ($services as &$service) {
             if (isset($service['image_url']) && strpos($service['image_url'], '/images/services/') === 0) {
-                $service['image_url'] = '/scrub/assets' . $service['image_url'];
+                $service['image_url'] = BASE_URL . '/assets' . $service['image_url'];
             }
         }
         return $services;

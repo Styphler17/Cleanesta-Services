@@ -11,9 +11,14 @@ define('DB_PASS', '');
 
 // Application configuration
 define('SITE_NAME', 'ScrubHub');
-define('SITE_URL', 'http://localhost/scrub');
 
-define('BASE_URL', '/scrub');
+// Dynamically determine the base URL from the current script location
+$detectedBase = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
+if ($detectedBase === '/' || $detectedBase === '\\') {
+    $detectedBase = '';
+}
+define('BASE_URL', $detectedBase);
+define('SITE_URL', 'http://localhost' . BASE_URL);
 
 // Error reporting
 error_reporting(E_ALL);

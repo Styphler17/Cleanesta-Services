@@ -8,8 +8,8 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- favicon  -->
-    <link rel="icon" href="/scrub/assets/images/logo/cleanesta-logo.png" type="image/png">
-    <link rel="stylesheet" href="/scrub/assets/css/theme.css">
+    <link rel="icon" href="<?php echo BASE_URL; ?>/assets/images/logo/cleanesta-logo.png" type="image/png">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/theme.css">
     <script>
         tailwind.config = {
             theme: {

@@ -90,7 +90,7 @@ ob_start();
                         <label class="block mb-1 font-medium">Profile Picture</label>
                         <div class="flex items-center gap-4 mb-2">
                             <?php if ($admin['picture']): ?>
-                                <img src="<?php echo str_replace('../', '/scrub/', $admin['picture']); ?>" alt="Profile" class="w-20 h-20 rounded-full object-cover">
+                                <img src="<?php echo str_replace('../', BASE_URL . '/', $admin['picture']); ?>" alt="Profile" class="w-20 h-20 rounded-full object-cover">
                             <?php else: ?>
                                 <div class="w-20 h-20 rounded-full bg-gray-200 flex items-center justify-center">
                                     <span class="text-gray-500 text-2xl"><?php echo strtoupper(substr($admin['username'], 0, 1)); ?></span>

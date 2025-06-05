@@ -1,7 +1,7 @@
 <!-- Hero Section -->
 <section id="home" class="container-fluid relative flex items-center justify-center min-h-screen bg-gradient-to-br from-[var(--color-primary)]/80 to-[var(--color-secondary)]/80">
     <!-- Background Image -->
-    <div class="absolute inset-0 w-full h-full bg-[url('/scrub/assets/images/hero/hero-bg.png')] bg-center bg-cover bg-no-repeat"></div>
+    <div class="absolute inset-0 w-full h-full bg-[url('<?php echo BASE_URL; ?>/assets/images/hero/hero-bg.png')] bg-center bg-cover bg-no-repeat"></div>
 
     <!-- Glassmorphism Overlay -->
     <div class="absolute inset-0 w-full h-full bg-white/30 backdrop-blur-md"></div>

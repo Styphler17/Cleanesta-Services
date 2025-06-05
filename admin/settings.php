@@ -96,7 +96,7 @@ ob_start();
                 <div class="flex-1">
                     <input type="file" name="<?php echo $key; ?>" class="w-full px-4 py-2 border rounded-lg" accept="image/*" onchange="previewImage(event, '<?php echo $key; ?>')">
                     <div class="mt-2 flex items-center gap-2 flex-wrap">
-                        <img id="preview-<?php echo $key; ?>" src="<?php echo str_replace('../', '/scrub/', $settingsAssoc[$key]); ?>" alt="<?php echo $key; ?>" class="h-12 w-12 object-contain border rounded shadow">
+                        <img id="preview-<?php echo $key; ?>" src="<?php echo str_replace('../', BASE_URL . '/', $settingsAssoc[$key]); ?>" alt="<?php echo $key; ?>" class="h-12 w-12 object-contain border rounded shadow">
                         <span class="text-xs text-gray-500">Current</span>
                     </div>
                 </div>
