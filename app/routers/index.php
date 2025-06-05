@@ -17,8 +17,6 @@ if (isset($_GET['page'])) {
     $uri = $_GET['page'];
 }
 
-global $connexion;
-
 try {
     switch ($uri) {
         case '':
