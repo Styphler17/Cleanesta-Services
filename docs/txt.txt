@@ -1,0 +1,56 @@
+ALTER TABLE services
+  ADD COLUMN created_by_admin INT NULL AFTER updated_at,
+  ADD COLUMN updated_by_admin INT NULL AFTER created_by_admin,
+  ADD COLUMN deleted_by_admin INT NULL AFTER updated_by_admin,
+  ADD CONSTRAINT fk_services_created_by_admin FOREIGN KEY (created_by_admin) REFERENCES admins(id) ON DELETE SET NULL,
+  ADD CONSTRAINT fk_services_updated_by_admin FOREIGN KEY (updated_by_admin) REFERENCES admins(id) ON DELETE SET NULL,
+  ADD CONSTRAINT fk_services_deleted_by_admin FOREIGN KEY (deleted_by_admin) REFERENCES admins(id) ON DELETE SET NULL;
+
+
+
+ALTER TABLE promotions
+  ADD COLUMN created_by_admin INT NULL AFTER updated_at,
+  ADD COLUMN updated_by_admin INT NULL AFTER created_by_admin,
+  ADD COLUMN deleted_by_admin INT NULL AFTER updated_by_admin,
+  ADD CONSTRAINT fk_promotions_created_by_admin FOREIGN KEY (created_by_admin) REFERENCES admins(id) ON DELETE SET NULL,
+  ADD CONSTRAINT fk_promotions_updated_by_admin FOREIGN KEY (updated_by_admin) REFERENCES admins(id) ON DELETE SET NULL,
+  ADD CONSTRAINT fk_promotions_deleted_by_admin FOREIGN KEY (deleted_by_admin) REFERENCES admins(id) ON DELETE SET NULL;
+
+
+ALTER TABLE reviews
+  ADD COLUMN created_by_admin INT NULL AFTER updated_at,
+  ADD COLUMN updated_by_admin INT NULL AFTER created_by_admin,
+  ADD COLUMN deleted_by_admin INT NULL AFTER updated_by_admin,
+  ADD CONSTRAINT fk_reviews_created_by_admin FOREIGN KEY (created_by_admin) REFERENCES admins(id) ON DELETE SET NULL,
+  ADD CONSTRAINT fk_reviews_updated_by_admin FOREIGN KEY (updated_by_admin) REFERENCES admins(id) ON DELETE SET NULL,
+  ADD CONSTRAINT fk_reviews_deleted_by_admin FOREIGN KEY (deleted_by_admin) REFERENCES admins(id) ON DELETE SET NULL;
+
+
+ALTER TABLE bookings
+  ADD COLUMN created_by_admin INT NULL AFTER updated_at,
+  ADD COLUMN updated_by_admin INT NULL AFTER created_by_admin,
+  ADD COLUMN deleted_by_admin INT NULL AFTER updated_by_admin,
+  ADD CONSTRAINT fk_bookings_created_by_admin FOREIGN KEY (created_by_admin) REFERENCES admins(id) ON DELETE SET NULL,
+  ADD CONSTRAINT fk_bookings_updated_by_admin FOREIGN KEY (updated_by_admin) REFERENCES admins(id) ON DELETE SET NULL,
+  ADD CONSTRAINT fk_bookings_deleted_by_admin FOREIGN KEY (deleted_by_admin) REFERENCES admins(id) ON DELETE SET NULL;
+
+
+ALTER TABLE service_areas
+  ADD COLUMN created_by_admin INT NULL AFTER updated_at,
+  ADD COLUMN updated_by_admin INT NULL AFTER created_by_admin,
+  ADD COLUMN deleted_by_admin INT NULL AFTER updated_by_admin,
+  ADD CONSTRAINT fk_service_areas_created_by_admin FOREIGN KEY (created_by_admin) REFERENCES admins(id) ON DELETE SET NULL,
+  ADD CONSTRAINT fk_service_areas_updated_by_admin FOREIGN KEY (updated_by_admin) REFERENCES admins(id) ON DELETE SET NULL,
+  ADD CONSTRAINT fk_service_areas_deleted_by_admin FOREIGN KEY (deleted_by_admin) REFERENCES admins(id) ON DELETE SET NULL;
+
+
+ALTER TABLE staff_availability
+  ADD COLUMN created_by_admin INT NULL AFTER updated_at,
+  ADD COLUMN updated_by_admin INT NULL AFTER created_by_admin,
+  ADD COLUMN deleted_by_admin INT NULL AFTER updated_by_admin,
+  ADD CONSTRAINT fk_staff_availability_created_by_admin FOREIGN KEY (created_by_admin) REFERENCES admins(id) ON DELETE SET NULL,
+  ADD CONSTRAINT fk_staff_availability_updated_by_admin FOREIGN KEY (updated_by_admin) REFERENCES admins(id) ON DELETE SET NULL,
+  ADD CONSTRAINT fk_staff_availability_deleted_by_admin FOREIGN KEY (deleted_by_admin) REFERENCES admins(id) ON DELETE SET NULL;
+
+
+  

@@ -1,0 +1,7 @@
+@import "theme.css";
+
+
+.header-hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+}

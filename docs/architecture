@@ -1,0 +1,62 @@
+scrub/
+├── app/                           # Application core
+│   ├── config/                    # Configuration files
+│   │   └── params.php            # Database and app settings
+│   ├── controllers/              # MVC Controllers
+│   │   ├── Controller.php        # Base controller
+│   │   ├── HomeController.php    # Home page controller
+│   │   ├── BookingController.php # Booking handling
+│   │   ├── ServicesController.php# Services handling
+│   │   ├── TestimonialsController.php
+│   │   └── PageController.php    # Static pages
+│   ├── models/                   # MVC Models
+│   │   ├── Model.php            # Base model
+│   │   ├── Service.php          # Services model
+│   │   ├── Review.php           # Reviews model
+│   │   └── Booking.php          # Bookings model
+│   ├── routers/                 # Routing
+│   │   └── index.php            # Main router
+│   └── views/                   # MVC Views
+│       ├── components/          # Reusable components
+│       │   ├── _header.php
+│       │   ├── _footer.php
+│       │   ├── _home-hero.php
+│       │   ├── _services.php
+│       │   ├── _about.php
+│       │   ├── _process.php
+│       │   ├── _testimonials.php
+│       │   ├── _promo.php
+│       │   └── _contact.php
+│       ├── pages/              # Page templates
+│       │   ├── home.php
+│       │   ├── services.php
+│       │   ├── testimonials.php
+│       │   └── booking.php
+│       ├── templates/          # Layout templates
+│       │   ├── index.php      # Main template
+│       │   ├── 404.php        # Error pages
+│       │   └── partials/      # Template parts
+│       └── errors/            # Error pages
+│
+├── bootstrap/                  # Bootstrap framework
+│   ├── css/
+│   └── js/
+│
+├── core/                      # Core system files
+│   ├── connexion.php         # Database connection
+│   ├── init.php              # Initialization
+│   └── helpers.php           # Helper functions
+│
+├── docs/                      # Documentation
+│   └── scrubhub.sql          # Database schema
+│
+├── public/                    # Public assets
+│   ├── css/                  # Stylesheets
+│   │   └── style.css         # Main styles
+│   ├── img/                  # Images
+│   │   ├── hero/            # Hero images
+│   │   ├── logo/            # Logo files
+│   │   └── services/        # Service images
+│   └── index.php            # Entry point
+│
+└── vendor/                    # Composer dependencies (if any)
