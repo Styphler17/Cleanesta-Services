@@ -19,18 +19,6 @@ define('BASE_URL', '/scrub');
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-global $connexion;
-try {
-    $connexion = new PDO(
-        "mysql:host=" . 'localhost' . ";dbname=" . 'scrubhub',
-        'root',
-        '',
-        [
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-            PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8mb4"
-        ]
-    );
-} catch (PDOException $e) {
-    die('Connection failed: ' . $e->getMessage());
-}
+// Ensure database connection is available for legacy includes
+require_once __DIR__ . '/../../core/Database.php';
+

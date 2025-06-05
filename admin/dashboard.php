@@ -4,8 +4,9 @@ if (!isset($_SESSION['admin_id'])) {
     header('Location: login.php');
     exit;
 }
-require_once '../app/config/params.php'; // This sets up $connexion
-$pdo = $connexion;
+require_once '../app/config/params.php';
+use Core\Database;
+$pdo = Database::getConnection();
 
 // Fetch stats
 $stats = [];

@@ -5,7 +5,8 @@ if (!isset($_SESSION['admin_id'])) {
     exit;
 }
 require_once '../app/config/params.php';
-$pdo = $connexion;
+use Core\Database;
+$pdo = Database::getConnection();
 
 // Handle Add Booking
 if (isset($_POST['add_booking'])) {

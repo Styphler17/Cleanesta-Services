@@ -1,7 +1,8 @@
 <?php
 require_once 'includes/auth.php';
 require_once '../app/config/params.php';
-$pdo = $connexion;
+use Core\Database;
+$pdo = Database::getConnection();
 
 // Get current admin data
 $stmt = $pdo->prepare("SELECT * FROM admins WHERE id = ?");

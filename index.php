@@ -21,4 +21,3 @@ require_once __DIR__ . '/app/routers/index.php';
 
 // Do NOT include the main template here unconditionally!
 
-global $pdo;

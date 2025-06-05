@@ -3,17 +3,14 @@
 namespace App\Models;
 
 use PDO;
+use Core\Database;
 
 abstract class Model {
     protected $connexion;
     protected $table;
 
     public function __construct() {
-        global $connexion;
-        if (!isset($connexion)) {
-            throw new \Exception('Database connection not initialized');
-        }
-        $this->connexion = $connexion;
+        $this->connexion = Database::getConnection();
     }
 
     public function findAll() {

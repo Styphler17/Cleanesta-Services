@@ -8,7 +8,8 @@ if (isset($_SESSION['admin_id'])) {
 }
 
 require_once '../app/config/params.php';
-$pdo = $connexion;
+use Core\Database;
+$pdo = Database::getConnection();
 
 $error = '';
 

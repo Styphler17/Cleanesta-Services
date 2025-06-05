@@ -5,7 +5,8 @@ if (!isset($_SESSION['admin_id'])) {
     exit;
 }
 require_once '../app/config/params.php';
-$pdo = $connexion;
+use Core\Database;
+$pdo = Database::getConnection();
 
 // Fetch all settings
 $stmt = $pdo->query("SELECT * FROM settings ORDER BY id ASC");
